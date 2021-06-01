@@ -1,1 +1,476 @@
+*{
+    font-family: 'cairo' , sans-serif;
+}
+*:focus{
+    outline:none;
+}
+*::selection{
+    color:#0dd0ff;
+    background-color:#333333;
+}
+img::selection{
+    background-color:transparent;
+}
+a{
+    text-decoration:none;
+}
+body{
+    overflow-x:hidden;
+    padding:0;
+    margin:0;
+    background-color:#333333;
+}
+::-webkit-scrollbar{
+    width:3px;
+}
+::-webkit-scrollbar-thumb:active{
+    background:#545454;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#767676;
+}
+::-webkit-scrollbar-thumb{
+    background:#a9a9a9;
+}
+::-webkit-scrollbar-track{
+    background-color:transparent;
+    border-top:60px solid #009ce4;
+}
 
+.HeaderContainer{
+    top:0;
+    padding:0 5%;
+    margin:0;
+    background-color:#009ce4;
+    width:90%;
+    height:60px;
+    position:fixed;
+    filter:drop-shadow(0 0 2px #0060e4);
+    z-index:5;
+}
+.Header{
+    list-style: none;
+    padding:0;
+    margin:0;
+    display:inline-flex;
+}
+.HeaderItem{
+    padding:15px 5px 15px 20px;
+    min-width:90px;
+    border-right:2px solid #007ccb;
+    border-radius:0 100px 300px 0;
+    color:#ffffff;
+    font-weight:600;
+}
+.HeaderItem:hover{
+    background:linear-gradient(90deg,#009ce4,#007ccb);
+    padding-left:40px;
+    cursor:pointer;
+    color:#0dd0ff;
+    transition:0.5s;
+}
+li[ItemCaret~=yes]:hover{
+    border-bottom-right-radius:0;
+    min-width:150px;
+}
+li[ListCaret~=yes]:hover i{
+    transform:rotate(90deg);
+}
+i{
+    margin-left:5px;
+}
+.HeaderItem:hover span a{
+    color:#0dd0ff;
+    font-weight:700;
+    transition:0.5s;
+}
+.HeaderItem:hover i{
+    transform:rotate(90deg);
+    transition:0.5s;
+}
+.HeaderItem:hover li{
+    font-weight:700;
+}
+.HeaderItemList a li,.HeaderItemList li{
+    padding-left:10px;
+}
+.HeaderItemList{
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    margin-top: 15px;
+    background-image: linear-gradient(270deg, #007ccb, #009ce4);
+    margin-left: -30px;
+    color: #ffffff;
+    border-radius: 0 0 10% 5%;
+    display: none;
+    width:0;
+}
+.HeaderItemList #SecondList{
+    display:none!important;
+}
+.HeaderItemList li:hover #SecondList{
+    display:inline-block!important;
+}
+#Services:hover .HeaderItemList{
+    display:block;
+    min-width:187px;
+}
+.HeaderItemList li:hover{
+    color:#0dd0ff;
+}
+.HeaderItemList li:hover i{
+    transform:rotate(0deg);
+}
+.HeaderItem a,.HeaderItemList a{
+    color:#ffffff;
+}
+.HeaderItemList li:hover a{
+    color:#0dd0ff;
+}
+.HeaderItem li:hover a{
+    color:#0dd0ff;
+}
+#SecondList a li{
+    color:#ffffff;
+}
+#SecondList a:hover li{
+    color:#0dd0ff;
+}
+ul[id~=SecondList]{
+    left:0;
+    margin-left:187px;
+    margin-top:0;
+    border-top-right-radius: 10%;
+}
+.LogoContainer{
+    height:60px;
+    background-color:#009ce4;
+}
+.Logo{
+    margin:6px;
+    height:48px;
+    width:106px;
+}
+.SearchContainer{
+    float:right;
+    width:-webkit-fill-available;
+    height:45px;
+    top:0;
+    list-style:none;
+    padding:7.5px 0;
+    margin:0 10% 0 60%;
+    position:absolute;
+}
+.SearchButton,.SearchBox{
+    padding:0;
+    margin:0;
+}
+input.SearchBox{
+    height:100%;
+    border:0;
+    border-radius:22.5px 11.25px 11.25px 22.5px;
+    color:#ffffff;
+    background-color:#007ccb;
+    width:-webkit-fill-available;
+    padding:0 5vw 0 25px;
+    font-size:large;
+}
+input.SearchBox::placeholder{
+    color:#ffffff;
+    opacity:0.5;
+}
+.SearchButton{
+    height:45px;
+    width:5vw;
+    right:0;
+    background-color:#000000;
+    position:absolute;
+    border-radius:22.5px 11.25px 11.25px 22.5px;
+}
+#HeaderSearchButton{
+    color:#ffffff;
+    vertical-align: -webkit-baseline-middle;
+    padding-left: 30%;
+}
+.SearchButton:hover #HeaderSearchButton{
+    color:#0dd0ff;
+    transition:0.5s;
+}
+.SearchButton:hover{
+    cursor:pointer;
+    background-image:linear-gradient(#333333,#000000);
+    transition:0.5s;
+}
+.BackTopButton{
+    position:fixed;
+    right:0;
+    bottom:0;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-image:radial-gradient(#0dd0ff,#007cbb);
+    cursor:pointer;
+    margin:0 1vw 1vw 0;
+}
+.BackTopButton:hover{
+    background-color:#000000;
+    background-image:none;
+    transition:0.5s;
+}
+.BackTopCaret{
+    width:50px;
+    height:50px;
+    color:#ffffff;
+    margin:15px 0 0 15px;
+    position:absolute;
+}
+.BackTopButton:hover .BackTopCaret{
+    color:#0dd0ff;
+    transition:0.5s;
+}
+.PostsContainer{
+    color:#ffffff;
+    border:5px solid #006ce4;
+    width:0;
+    height:fit-content;
+    background-image:linear-gradient(180deg, #007ccb, #009ce4);
+    margin:0 10%;
+    border-radius:20px;
+    padding:75px 1% 0 1%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.PostsContainer{
+    width:80%;
+    transition:10s;
+}
+.Posts{
+    display:none;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.Posts{
+    display:flex;
+    transition:10s;
+}
+.Post{
+    width:calc(100% / 3);
+    height:70px;
+    display:contents;
+}
+.PostContainer{
+    width:28.5%;
+    height:200px;
+    min-width:300px;
+    margin:0 0 15px 1vw;
+    border:5px solid #ffffff;
+    border-radius:10px;
+    cursor:pointer;
+    display:inline-table;
+    overflow:hidden;
+    cursor:default;
+}
+.Post img{
+    width:23vw;
+    height:200px;
+    min-width:300px;
+    border-radius:3px;
+    cursor:default;
+}
+.PostContainer:hover .Post img{
+    filter:blur(3px);
+    transform:scale(1.5);
+    transition:1s;
+}
+.PostLink{
+    color:transparent;
+    display:contents;
+}
+.PostFill{
+    width:0.1px;
+    height:0.1px;
+    border-radius:50%;
+    background-color:#ffffff;
+    box-shadow:0 0 0 1px #ffffff;
+    position:relative;
+    z-index:2;
+}
+.PostContainer:hover .PostFill{
+    box-shadow:0 0 0 500px #ffffff;
+    opacity:0.5;
+    transition:1s;
+}
+.PostContainer:hover .PostDetails{
+    opacity:1;
+    
+}
+.PostDetails{
+    opacity:0;
+    cursor:default;
+}
+h2.PostTitle,hr.PostTitleHr,h5.PostDescription,.SeeMoreButton{
+    position:absolute;
+    z-index:3;
+    color:black;
+    width:250px;
+    margin-left:30px;
+}
+h2.PostTitle{
+    margin:0 30px;
+    color:#007ce4;
+}
+hr.PostTitleHr{
+    border-radius:2px;
+    height:4px;
+    margin:40px 30px;
+    background-image:linear-gradient(90deg,#009ccb,#007ce4);
+    width:1px;
+    border:0;
+}
+.PostContainer:hover hr.PostTitleHr{
+    width:200px;
+    transition:1s;
+}
+h5.PostDescription{
+    margin:50px 30px;
+}
+h5.PostDescription:after{
+    content:"..."
+}
+.SeeMoreButton{
+    color:#000000;
+    background-image: linear-gradient(270deg, #007ce4, #009ccb);
+    text-align:center;
+    border-radius:5px;
+    margin:155px 0 0 30px;
+    font-size:larger;
+    font-weight:600;
+    padding-left:20px;
+    width:230px;
+}
+.SeeMoreButton:hover{
+    padding-left:0;
+    color:#ffffff;
+    background-image:linear-gradient(#000000,#000000);
+    transition:0.5s;
+    width:250px;
+}
+.SeeMoreButton:active{
+    color:#0dd0ff;
+    transition:0s;
+}
+.SeeMoreButton i{
+    opacity:0;
+}
+.SeeMoreButton:hover i{
+    margin-left:20px;
+    opacity:1;
+    transition:0.5s;
+}
+.PagerContainer{
+    display:flex;
+    justify-content:center;
+}
+.Pager{
+    margin:15px 0;
+    background-color:#000000;
+    border-radius:100%
+}
+.Pager div{
+    display:inline;
+}
+.Pager div i{
+    color:#ffffff;
+    background-image:linear-gradient(#009ce4,#007ccb);
+    margin:0;
+    padding:15px;
+    border-radius:50%;
+    cursor:pointer;
+}
+.Pager div i:hover{
+    background-image:linear-gradient(#000000,#000000);
+    color:#00d0ff;
+    transition:0.5s;
+}
+.PageNum{
+    color:#000000;
+    background-color:#ffffff;
+    border-radius:50%;
+    padding:5px 10px;
+    margin:0 3px;
+    -webkit-text-stroke:1.5px;
+    cursor:pointer;
+}
+.PageNum:hover{
+    border:10px solid #009ce4;
+    background-color:#009ce4;
+    color:#ffffff;
+    transition:0.5s
+}
+.FirstPage:hover{
+    margin-right:15px;
+    transition:0.5s;
+}
+#\31{
+    color:#ffffff;
+    background-color:#009ce4;
+}
+.LastPage:hover{
+    margin-left:15px;
+    transition:0.5s;
+}
+.FooterContainer{
+    width:90%;
+    min-height:370px;
+    padding:0;
+    margin:0 5%;
+    background-color:#121212;
+    border-radius:50% 50% 0 0;
+}
+.FooterLogo{
+    width:100%;
+    display:inline-flex;
+    justify-content:center;
+    padding-top:1%;
+    filter:grayscale(1);
+    opacity:0.5;
+}
+.SocialAccountsContainer{
+    color:#ffffff;
+    display:inline-flex;
+    justify-content:center;
+    width:100%;
+}
+.SocialAccounts i{
+    color:#ffffff;
+}
+.SocialAccounts i#tw:hover{
+    color:#1da1f2;
+    transition:0.3s;
+}
+.SocialAccounts i#fb:hover{
+    color:#2d88ff;
+    transition:0.3s;
+}
+.SocialAccounts i#insta:hover{
+    color:#c42d91;
+    transition:0.3s;
+}
+.SocialAccounts i#in:hover{
+    color:#006194;
+    transition:0.3s;
+}
+.SocialAccounts i#red:hover{
+    color:#ff4500;
+    transition:0.3s;
+}
+.SocialAccounts i#twitch:hover{
+    color:#9147ff;
+    transition:0.3s;
+}
+.SocialAccounts i#snap:hover{
+    color:#fffc00;
+    transition:0.3s;
+}
