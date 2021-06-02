@@ -232,7 +232,7 @@ input.SearchBox::placeholder{
 .PostsContainer{
     color:#ffffff;
     border:5px solid #006ce4;
-    width:0;
+    width:80%;
     height:fit-content;
     background-image:linear-gradient(180deg, #007ccb, #009ce4);
     margin:0 10%;
@@ -241,10 +241,6 @@ input.SearchBox::placeholder{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-}
-.PostsContainer{
-    width:80%;
-    transition:10s;
 }
 .Posts{
     display:none;
@@ -433,7 +429,7 @@ h5.PostDescription:after{
     width:100%;
     display:inline-flex;
     justify-content:center;
-    padding-top:1%;
+    padding-top:2%;
     filter:grayscale(1);
     opacity:0.5;
 }
@@ -442,9 +438,14 @@ h5.PostDescription:after{
     display:inline-flex;
     justify-content:center;
     width:100%;
+    margin-top:10px;
+}
+.SocialAccounts{
+    max-width:65%;
 }
 .SocialAccounts i{
     color:#ffffff;
+    margin-left:10px;
 }
 .SocialAccounts i#tw:hover{
     color:#1da1f2;
@@ -472,5 +473,35 @@ h5.PostDescription:after{
 }
 .SocialAccounts i#snap:hover{
     color:#fffc00;
+    transition:0.3s;
+}
+.SocialAccounts i#tik{
+    z-index:5;
+}
+a#tiktok{
+    display:inline-grid;
+}
+#SyanTok{
+    color:#3ec7c3;
+    margin-top:-17.5px;
+    z-index:3;
+    opacity:0;
+}
+#RedTok{
+    color:#be485f;
+    margin-top:-14px;
+    z-index:3;
+    opacity:0;
+}
+a#tiktok:hover #SyanTok,a#tiktok:hover #RedTok{
+    opacity:1;
+    transition:0.3s;
+}
+.SocialAccounts i#vk:hover{
+    color:#2787f5;
+    transition:0.3s;
+}
+.SocialAccounts i#pin:hover{
+    color:#e60023;
     transition:0.3s;
 }
