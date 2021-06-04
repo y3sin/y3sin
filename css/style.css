@@ -429,9 +429,12 @@ h5.PostDescription:after{
     width:100%;
     display:inline-flex;
     justify-content:center;
-    padding-top:2%;
+    padding-top:25px;
     filter:grayscale(1);
     opacity:0.5;
+}
+#FooterMenue{
+    color:#0dd0ff;
 }
 .SocialAccountsContainer{
     color:#ffffff;
@@ -439,69 +442,84 @@ h5.PostDescription:after{
     justify-content:center;
     width:100%;
     margin-top:10px;
+    margin-bottom:20px;
 }
 .SocialAccounts{
     max-width:65%;
 }
+.SocialAccounts a{
+    display:inline-flex;
+    justify-content:flex-end;
+    margin-left:10px;
+    padding:0;
+}
+.SocialAccounts a:hover{
+    background-color:#ffffff;
+    border-radius:50%;
+    padding:5px;
+    width:18px;
+    height:18px;
+    justify-content:center;
+    transform:translateY(5px);
+    transition:0.5s;
+}
 .SocialAccounts i{
     color:#ffffff;
-    margin-left:10px;
 }
-.SocialAccounts i#tw:hover{
+.SocialAccounts a:hover i{
+    margin:0;
+    display:contents;
+}
+.SocialAccounts a#twitter:hover i{
     color:#1da1f2;
-    transition:0.3s;
 }
-.SocialAccounts i#fb:hover{
+.SocialAccounts a#fb:hover i{
     color:#2d88ff;
-    transition:0.3s;
 }
-.SocialAccounts i#insta:hover{
+.SocialAccounts a#insta:hover i{
     color:#c42d91;
-    transition:0.3s;
 }
-.SocialAccounts i#in:hover{
+.SocialAccounts a#in:hover i{
     color:#006194;
-    transition:0.3s;
 }
-.SocialAccounts i#red:hover{
+.SocialAccounts a#reddit:hover i{
     color:#ff4500;
-    transition:0.3s;
 }
-.SocialAccounts i#twitch:hover{
+.SocialAccounts a#twitch:hover i{
     color:#9147ff;
-    transition:0.3s;
 }
-.SocialAccounts i#snap:hover{
+.SocialAccounts a#snap:hover i{
     color:#fffc00;
-    transition:0.3s;
+    -webkit-text-stroke:1.5px #000000;
 }
-.SocialAccounts i#tik{
-    z-index:5;
+.SocialAccounts a#tiktok:hover i#tik{
+    display:none;
 }
 a#tiktok{
     display:inline-grid;
+    margin-left:10px;
+    width:18px;
+    height:18px;
 }
-#SyanTok{
-    color:#3ec7c3;
-    margin-top:-17.5px;
-    z-index:3;
-    opacity:0;
+a#tiktok:hover{
+    transform:translateY(9px);
 }
-#RedTok{
-    color:#be485f;
-    margin-top:-14px;
-    z-index:3;
-    opacity:0;
+img#TiktokIcon{
+    width:18px;
+    height:18px;
+    display:none;
 }
-a#tiktok:hover #SyanTok,a#tiktok:hover #RedTok{
-    opacity:1;
-    transition:0.3s;
-}
-.SocialAccounts i#vk:hover{
+a#tiktok:hover img#TiktokIcon{
+    display:block;
+} 
+.SocialAccounts a#vk:hover i{
     color:#2787f5;
     transition:0.3s;
 }
-.SocialAccounts i#pin:hover{
+.SocialAccounts a#pin:hover i{
     color:#e60023;
     transition:0.3s;
+}
+.FooterMenues{
+    
 }
