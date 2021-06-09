@@ -118,6 +118,7 @@ i{
 }
 .HeaderItemList li:hover{
     color:#0dd0ff;
+    transition:0.5s;
 }
 .HeaderItemList li:hover i{
     transform:rotate(0deg);
@@ -127,6 +128,7 @@ i{
 }
 .HeaderItemList li:hover a{
     color:#0dd0ff;
+    transition:0.5s;
 }
 .HeaderItem li:hover a{
     color:#0dd0ff;
@@ -136,6 +138,7 @@ i{
 }
 #SecondList a:hover li{
     color:#0dd0ff;
+    transition:0.5s;
 }
 ul[id~=SecondList]{
     left:0;
@@ -441,8 +444,7 @@ h5.PostDescription:after{
     display:inline-flex;
     justify-content:center;
     width:100%;
-    margin-top:10px;
-    margin-bottom:20px;
+    margin:10px 0;
 }
 .SocialAccounts{
     max-width:65%;
@@ -478,6 +480,11 @@ h5.PostDescription:after{
 }
 .SocialAccounts a#insta:hover i{
     color:#c42d91;
+}
+.SocialAccounts a#insta:hover i::before{
+    background-image: linear-gradient(45deg,#f6d828,#ee0110,#4561c6);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 .SocialAccounts a#in:hover i{
     color:#006194;
@@ -520,6 +527,71 @@ a#tiktok:hover img#TiktokIcon{
     color:#e60023;
     transition:0.3s;
 }
+.NewslistContainer{
+    position:absolute;
+    left:50%;
+    width:60vw;
+    max-width:300%;
+    transform:translateX(-50%);
+}
+.NewslistContainer span{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    background-color:#000000;
+    border-radius:15px 15px 0 0;
+    padding:0 5px
+}
+.NewslistBox{
+    position:absolute;
+    color:#00bce4;
+    background-color:#222222;
+    font-size:medium;
+    border-radius:25px;
+    border-style:none;
+    padding:0 25px;
+    height:50px;
+    width:60vw;
+    max-width:300%;
+    left:50%;
+    transform:translateX(-50%);
+}
+.NewslistButton{
+    position:absolute;
+    z-index:1;
+    color:#ffffff;
+    width:80px;
+    height:46px;
+    right:3px;
+    margin-top:2px;
+    background-image:linear-gradient(90deg,#007ccb,#009ce4);
+    display:flex;
+    justify-content:center;
+    border-radius:22.5px;
+    cursor:pointer;
+}
+.NewslistButton i{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%)
+}
+.NewslistButton:hover{
+    background-image:linear-gradient(#000000,#000000);
+    color:#0dd0ff;
+    transition:0.5s;
+}
 .FooterMenues{
-    
+    display:inline-flex;
+    margin-top:80px;
+    color:#0dd0ff;
+    width:100%
+}
+.FooterMenue{
+    list-style:none;
+    width:100%;
+    min-width:200px;
+}
+.FooterMenue li{
+    color:#aaaaaa;
+    margin-left:10px;
 }
