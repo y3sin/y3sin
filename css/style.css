@@ -176,7 +176,7 @@ input.SearchBox{
     color:#ffffff;
     background-color:#007ccb;
     width:-webkit-fill-available;
-    padding:0 5vw 0 25px;
+    padding:0 70px 0 25px;
     font-size:large;
 }
 input.SearchBox::placeholder{
@@ -185,7 +185,7 @@ input.SearchBox::placeholder{
 }
 .SearchButton{
     height:45px;
-    width:5vw;
+    width:70px;
     right:0;
     background-color:#000000;
     position:absolute;
@@ -580,18 +580,82 @@ a#tiktok:hover img#TiktokIcon{
     color:#0dd0ff;
     transition:0.5s;
 }
-.FooterMenues{
+.FooterMenuesContainer{
     display:inline-flex;
     margin-top:80px;
-    color:#0dd0ff;
-    width:100%
+    width:100%;
+    justify-content:center;
+}
+.FooterMenues{
+    width:80%;
+    display:flex;
+    flex-wrap:wrap;
+}
+.FooterMenues span{
+    font-weight:700;
+    color:transparent;
+    background-image:linear-gradient(90deg,#004ccb,#00bce4);
+    -webkit-background-clip:text;
 }
 .FooterMenue{
     list-style:none;
-    width:100%;
-    min-width:200px;
+    width:-webkit-fill-available;
+    min-width:fit-content;
+    width:0;
+    display:inline-table;
+    margin-right:auto;
 }
 .FooterMenue li{
+    margin-bottom:10px;
+}
+.FooterMenue li a{
     color:#aaaaaa;
+    margin-left:20px;
+}
+.FooterMenue li a:hover{
+    color:#0dd0ff;
+    font-weight:700;
+    margin-left:30px;
+    transition:0.5s;
+}
+.FooterBreak{
+    width:80%;
+    border:1px solid #323232;
+    border-radius:50%;
+    
+}
+.FooterBottomContainer{
+    height:fit-content;
+    width:100%;
+    padding:0 10px;
+    display:flex;
+    justify-content:center;
+}
+.FooterBottomSpace{
+    width:15%;
+}
+.FooterBottom,.Copyrights{
+    display:contents;
+    list-style:none;
+}
+.Copyrights{
+    float:right;
+}
+.FooterBottom li,.Copyrights li{
     margin-left:10px;
+    min-width:fit-content;
+}
+.FooterBottom li:first-child,.Copyrights li:first-child{
+    margin-left:0;
+}
+.FooterBottom li:first-child:before,.Copyrights li:first-child:before{
+    content:none;
+}
+.FooterBottom li:before,.Copyrights li:before{
+    content:'●';
+    color:#555555;
+    margin-right:10px;
+}
+.FooterBottom li a,.Copyrights li a{
+    color:#aaaaaa;
 }
