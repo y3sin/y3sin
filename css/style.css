@@ -21,7 +21,8 @@ body{
     background-color:#333333;
 }
 ::-webkit-scrollbar{
-    width:3px;
+    width:3.5px;
+    min-width:0.4vw;
 }
 ::-webkit-scrollbar-thumb:active{
     background:#545454;
@@ -436,9 +437,6 @@ h5.PostDescription:after{
     filter:grayscale(1);
     opacity:0.5;
 }
-#FooterMenue{
-    color:#0dd0ff;
-}
 .SocialAccountsContainer{
     color:#ffffff;
     display:inline-flex;
@@ -447,7 +445,7 @@ h5.PostDescription:after{
     margin:10px 0;
 }
 .SocialAccounts{
-    max-width:65%;
+    max-width:48%;
 }
 .SocialAccounts a{
     display:inline-flex;
@@ -489,6 +487,28 @@ h5.PostDescription:after{
 .SocialAccounts a#in:hover i{
     color:#006194;
 }
+/*Start Booking.com*/
+a#book:hover{
+    transform:translateY(11px);
+}
+.SocialAccounts a#book span{
+    color:#ffffff;
+    font-weight:700;
+}
+.SocialAccounts a#book:hover span{
+    color:#003580;
+    transform:translateY(-35%);
+}
+.SocialAccounts a#book span:after{
+    content:'●';
+    font-size:1px;
+    bottom:0;
+    margin-left:1px;
+}
+.SocialAccounts a#book:hover span:after{
+    color:#0896ff;
+}
+/*End Booking.com*/
 .SocialAccounts a#reddit:hover i{
     color:#ff4500;
 }
@@ -499,6 +519,7 @@ h5.PostDescription:after{
     color:#fffc00;
     -webkit-text-stroke:1.5px #000000;
 }
+/*Start Tiktok*/
 .SocialAccounts a#tiktok:hover i#tik{
     display:none;
 }
@@ -519,13 +540,15 @@ img#TiktokIcon{
 a#tiktok:hover img#TiktokIcon{
     display:block;
 } 
+/*End Tiktok*/
 .SocialAccounts a#vk:hover i{
     color:#2787f5;
-    transition:0.3s;
 }
 .SocialAccounts a#pin:hover i{
     color:#e60023;
-    transition:0.3s;
+}
+.SocialAccounts a#be:hover i{
+    color:#0057ff;
 }
 .NewslistContainer{
     position:absolute;
@@ -534,13 +557,16 @@ a#tiktok:hover img#TiktokIcon{
     max-width:300%;
     transform:translateX(-50%);
 }
-.NewslistContainer span{
+.NewslistContainer .MessageContainer{
+    background-color:#000000;
+    border-radius:15px 15px 0 0;
+    padding:0 5px;
+    height:55px;
+    width:fit-content;
+    overflow:hidden;
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    background-color:#000000;
-    border-radius:15px 15px 0 0;
-    padding:0 5px
 }
 .NewslistBox{
     position:absolute;
@@ -591,7 +617,7 @@ a#tiktok:hover img#TiktokIcon{
     display:flex;
     flex-wrap:wrap;
 }
-.FooterMenues span{
+.FooterMenue span,#FooterMenue span{
     font-weight:700;
     color:transparent;
     background-image:linear-gradient(90deg,#004ccb,#00bce4);
@@ -627,16 +653,22 @@ a#tiktok:hover img#TiktokIcon{
 .FooterBottomContainer{
     height:fit-content;
     width:100%;
-    padding:0 10px;
+    padding-bottom:8px;
     display:flex;
-    justify-content:center;
+    flex-wrap:wrap;
+    justify-content:space-between;
 }
 .FooterBottomSpace{
     width:15%;
 }
 .FooterBottom,.Copyrights{
-    display:contents;
     list-style:none;
+    width:-webkit-fill-available;
+    margin:0;
+    padding:0 10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center; 
 }
 .Copyrights{
     float:right;
@@ -651,11 +683,21 @@ a#tiktok:hover img#TiktokIcon{
 .FooterBottom li:first-child:before,.Copyrights li:first-child:before{
     content:none;
 }
-.FooterBottom li:before,.Copyrights li:before{
+.FooterBottom li:before{
     content:'●';
     color:#555555;
     margin-right:10px;
 }
+.Copyrights li span{
+    color:transparent;
+    background-image:linear-gradient(90deg,#004ccb,#00bce4);
+    -webkit-background-clip:text;
+}
 .FooterBottom li a,.Copyrights li a{
     color:#aaaaaa;
+}
+.FooterBottom li a:hover,.Copyrights li a:hover{
+    color:#0dd0ff;
+    font-size:18px;
+    transition:0.5s;
 }
