@@ -3,7 +3,6 @@
 - 🌱 I’m currently learning Front-End (Web Design).
 - 📫 How to reach me
   - Twitter ==> https://twitter.com/y3sinsamy
-  - Facebook ==> https://www.facebook.com/y3sinsamy
   - Linked In ==> https://www.linkedin.com/in/yasin-samy-9a5a6620b/
 <!---
 💞️ I’m looking to collaborate on ... 
